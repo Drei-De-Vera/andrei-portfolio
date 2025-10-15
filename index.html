@@ -2,86 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jan Andrei De Vera - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Jan Andrei De Vera</h1>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1 class="logo">Andrei.dev</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+  </nav>
+
+  <!-- ===== Header ===== -->
+  <header class="hero">
+    <h2>Jan Andrei De Vera</h2>
     <p>Computer Engineer | Software Developer</p>
   </header>
 
   <main>
-    <!-- About Section -->
-    <section id="about">
+    <!-- ===== About Section ===== -->
+    <section id="about" class="fade-in">
       <h2>About Me</h2>
-      <p>Hello! I'm <strong>Jan Andrei De Vera</strong>, a passionate Computer Engineer based in San Jose Sico, Batangas
-        City.
-        I’m a Cum Laude graduate of STI College Batangas with a strong interest in software and hardware integration,
-        IoT systems, and innovative technology solutions.</p>
+      <p>
+        Hello! I'm <strong>Jan Andrei De Vera</strong>, a passionate Computer Engineer based in San Jose Sico, Batangas
+        City. I’m a <strong>Cum Laude</strong> graduate of STI College Batangas, with interests in software-hardware
+        integration, IoT systems, and creative technology solutions.
+      </p>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
+    <!-- ===== Education Section ===== -->
+    <section id="education" class="fade-in">
       <h2>Education</h2>
-      <p><strong>STI College Batangas</strong> – Bachelor of Science in Computer Engineering</p>
+      <p><strong>STI College Batangas</strong> – B.S. in Computer Engineering</p>
       <ul>
-        <li>Graduation: May 2025 | Cumulative GWA: 1.41 (Cum Laude)</li>
-        <li>Thesis: <em>Vendo-Tools Stand with Anti-Theft System and Phone Charging Feature for Bicycle and Motorcycle
-            Owners</em></li>
+        <li>Graduated: May 2025 | Cumulative GWA: 1.41 (Cum Laude)</li>
+        <li>Thesis: <em>Vendo-Tools Stand with Anti-Theft System and Phone Charging Feature</em></li>
         <li>Awards: Student Leadership Award, Programmer of the Year</li>
       </ul>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
+    <!-- ===== Experience Section ===== -->
+    <section id="experience" class="fade-in">
       <h2>Experience</h2>
-      <div class="project">
+      <div class="project-card">
         <h3>Software Developer – CRV Group Ventures Inc.</h3>
         <p><em>Mayapa, Laguna | Feb 2025 – July 2025</em></p>
         <ul>
-          <li>Developed and tested IoT prototypes using Arduino, C++, and microcontrollers for smart automation
-            projects.</li>
-          <li>Collaborated with cross-functional teams on hardware-software integration.</li>
-          <li>Mentored peers in coding best practices, debugging, and documentation.</li>
-          <li>Assisted with deployment, troubleshooting, and technical documentation for IoT systems.</li>
+          <li>Developed IoT prototypes using Arduino, C++, and microcontrollers.</li>
+          <li>Collaborated with cross-functional teams on system integration.</li>
+          <li>Assisted in debugging, testing, and deployment of automation systems.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
+    <!-- ===== Projects Section ===== -->
+    <section id="portfolio" class="fade-in">
       <h2>Projects</h2>
 
-      <div class="project">
-        <h3>Vendo-Tools Stand (Capstone Project)</h3>
-        <p>Multifunctional vending machine with tool borrowing, phone charging, and anti-theft features.</p>
+      <div class="project-card">
+        <h3>Vendo-Tools Stand</h3>
+        <p>A multifunctional vending machine with tool borrowing, charging, and anti-theft features.</p>
         <p><strong>Tech Used:</strong> Arduino IDE, PHP/MySQL, JavaScript, Bootstrap</p>
+        <button onclick="toggleDetails('project1')">View Details</button>
+        <div id="project1" class="details">
+          <p>Developed as a capstone project integrating hardware sensors and IoT management systems.</p>
+        </div>
       </div>
 
-      <div class="project">
+      <div class="project-card">
         <h3>Portfolio Website</h3>
-        <p>A basic responsive website demonstrating HTML, CSS, and JavaScript interactivity.</p>
+        <p>A responsive personal portfolio showcasing my projects and experience.</p>
+        <button onclick="toggleDetails('project2')">View Details</button>
+        <div id="project2" class="details">
+          <p>Built using HTML, CSS, and JavaScript to demonstrate front-end skills.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section id="leadership">
+    <!-- ===== Leadership Section ===== -->
+    <section id="leadership" class="fade-in">
       <h2>Leadership & Volunteer Experience</h2>
       <ul>
-        <li><strong>President – Computer Engineering Student Organization (2023–2024)</strong><br>
-          Directed student initiatives, events, and collaborative tech projects. Earned awards such as Most Active
-          Leader and Loyalty Award.</li>
-        <li><strong>Business Manager – Computer Engineering Student Organization (2022–2023)</strong><br>
-          Managed budgets and resource allocations for events and technical projects.</li>
+        <li><strong>President</strong> – Computer Engineering Student Organization (2023–2024)
+          <br>Directed tech initiatives, events, and community projects. Earned Most Active Leader & Loyalty Award.
+        </li>
+        <li><strong>Business Manager</strong> – CESO (2022–2023)
+          <br>Managed budgets and resource allocations for tech-driven projects.
+        </li>
       </ul>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
+    <!-- ===== Certifications Section ===== -->
+    <section id="certifications" class="fade-in">
       <h2>Certifications</h2>
       <ul>
         <li>AWS Academy Cloud Foundations — AWS Academy Graduate</li>
@@ -89,23 +112,25 @@
       </ul>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="fade-in">
       <h2>Skills</h2>
       <ul>
-        <li><strong>Languages & Tools:</strong> C++, Python, Java, PHP, SQL, HTML/CSS, JavaScript, AWS, Linux (CLI), MS
-          Office</li>
-        <li><strong>Hardware & Embedded:</strong> Arduino, IoT Prototyping, Systems Integration</li>
-        <li><strong>Soft Skills:</strong> Leadership, Logical Thinking, Adaptability, Team Collaboration, Documentation
-        </li>
+        <li><strong>Languages:</strong> C++, Python, Java, PHP, SQL, HTML/CSS, JavaScript</li>
+        <li><strong>Tools:</strong> AWS, Linux (CLI), Arduino, MS Office</li>
+        <li><strong>Soft Skills:</strong> Leadership, Logical Thinking, Adaptability, Collaboration</li>
       </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="fade-in">
       <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:janandreicasaodevera@gmail.com">janandreicasaodevera@gmail.com</a></p>
-      <p>Phone: +63 999 504 5429</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
 
       <div class="social-links">
         <a href="https://github.com/Drei-De-Vera" target="_blank">
@@ -122,7 +147,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Andrei. All rights reserved.</p>
+    <p>&copy; 2025 Jan Andrei De Vera. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

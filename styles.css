@@ -173,7 +173,7 @@ button:focus {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  max-width: 500px;
   padding: 10px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
